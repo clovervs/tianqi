@@ -4,11 +4,11 @@
             recalc = function () {
                 var clientWidth = docEl.clientWidth;
                 if (!clientWidth) return;
-                if(clientWidth>=750){
+                if(clientWidth>=320){
                   // 这里的640 取决于设计稿的宽度
                     docEl.style.fontSize = '100px';
                 }else{
-                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
                 }     
             };
 

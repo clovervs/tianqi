@@ -1,26 +1,142 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="css/base.css"/>
-		<script src="js/jquery-3.3.1.js"></script>
-		<script src="js/rem.js"></script>
-		<srcipt src="js/index.js"></srcipt>
-		
-	</head>
-	<body>
-		<header>
-			<p>北京市 海淀区</p>
-		</header>
-		<main>
-			<div class="wuran">
-				<span>150</span>
-				<span>中度污染</span>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天气</title>
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_722059_9yo2t2zxti.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/rem.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<section class="main">
+		<a href="javascript:;" class="back">
+			<i class="iconfont icon-fanhui"></i>
+		</a>
+		<p class="location">
+			<a href="javascript:;"><i class="iconfont icon-dizhi"></i></a>
+			<span></span>
+		</p>
+		<a href="javascript:;" class="voice"><i class="iconfont icon-yinliang"></i></a>
+		<a href="javascript:;" class="fenxiang"><i class="iconfont icon-fenxiang"></i></a>
+		<div class="pollute">
+			<p class="til"></p>
+			<p class="value"></p>
+		</div>
+		<p class="now_temperature">
+			<span></span>°
+		</p>
+		<p class="now_weather"></p>
+		<div class="now_wind"></div>
+		<p class="tips"></p>
+	</section>
+	<section class="today">
+		<div class="item">
+			<div class="item_top">
+				<p class="item_day">今天</p>
+				<p class="item_temperature" id="today_temperature"></p>
 			</div>
-		</main>
-		
-	</body>
+			<div class="item_bottom">
+				<p class="item_weather" id="today_weather"></p>
+				<img src="" alt="">
+			</div>
+		</div>
+		<div class="item" style="border: none;">
+			<div class="item_top">
+				<p class="item_day">明天</p>
+				<p class="item_temperature" id="tomorrow_temperature"></p>
+			</div>
+			<div class="item_bottom">
+				<p class="item_weather" id="tomorrow_weather">小雨转晴</p>
+				<img src="" alt="">
+			</div>
+		</div>
+	</section>
+	<section class="hours">
+		<ul class="hoursbox">
+			<!-- <li>
+				<p class="hours_time">14:00</p>
+				<img src="img/13.png" alt="">
+				<p class="hours_temperature">30</p>
+			</li> -->
+		</ul>
+	</section>
+	<section class="days">
+		<ul class="daysbox">
+			<!-- <li>
+				<p class="days_day">昨天</p>
+				<p class="days_date">06/25</p>
+				<div class="daytime">
+					<p class="days_weather">阴</p>
+					<img src="img/16.png" alt="">
+				</div>
+				<div class="night">
+					<img src="img/19.png" alt="">
+					<p class="days_weather">雷阵雨</p>
+				</div>
+				<p class="days_wind">东北风</p>
+				<p class="days_windstrong">3级</p>
+			</li> -->
+		</ul>
+	</section>
+	<section class="live">
+		<ul class="livebox">
+			<li>
+				<span class="live_icon"><img src="img/xianhao.png" alt=""></span>
+				<p class="live_meseage">1和6</p>
+				<p class="live_title">尾号限行</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/chuanyi.png" alt=""></span>
+				<p class="live_meseage">炎热</p>
+				<p class="live_title">穿衣</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/xianhao.png" alt=""></span>
+				<p class="live_meseage">1和6</p>
+				<p class="live_title">尾号限行</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/chuanyi.png" alt=""></span>
+				<p class="live_meseage">炎热</p>
+				<p class="live_title">穿衣</p>
+			</li><li>
+				<span class="live_icon"><img src="img/xianhao.png" alt=""></span>
+				<p class="live_meseage">1和6</p>
+				<p class="live_title">尾号限行</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/chuanyi.png" alt=""></span>
+				<p class="live_meseage">炎热</p>
+				<p class="live_title">穿衣</p>
+			</li><li>
+				<span class="live_icon"><img src="img/xianhao.png" alt=""></span>
+				<p class="live_meseage">1和6</p>
+				<p class="live_title">尾号限行</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/chuanyi.png" alt=""></span>
+				<p class="live_meseage">炎热</p>
+				<p class="live_title">穿衣</p>
+			</li>
+			<li>
+				<span class="live_icon"><img src="img/chuanyi.png" alt=""></span>
+				<p class="live_meseage">炎热</p>
+				<p class="live_title">穿衣</p>
+			</li>
+		</ul>
+	</section>
+	<footer>
+		<div class="footer_top">
+			<a href="javascript:;" class="from">数据来源于中国天气网</a>
+			<a class="feedback" href="javascript:;">反馈</a>
+			<a class="jubao" href="javascript:;">举报中心</a>
+
+		</div>
+		<div class="copyright">Copyright © 1998 - 2018 Tencent. All Rights Reserved</div>
+	</footer>
+</body>
 </html>

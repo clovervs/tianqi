@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	$.ajax({
+	url:'https://www.toutiao.com/stream/widget/local_weather/data/?city=太原',
+	type:'POST',
+	async:true,
+	dataType:'jsonp',
+	success:function(obj){
+		console.log(obj.data.weather)
+	}
+})
+</script>
